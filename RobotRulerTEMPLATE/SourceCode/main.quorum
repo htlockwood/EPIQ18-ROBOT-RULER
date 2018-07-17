@@ -13,9 +13,9 @@ Utility utility
 integer speed=64
 motor:SetSpeed("B",speed) 
 motor:SetSpeed("C",speed)
-integer volume=32
+integer volume=32 // how loud will the robot be 100 full, 0 silent 
 //================================
-integer  millisecondsoftravel=4000 //this is where the student can change how long the robot moves
+integer  millisecondsoftravel=8000 //this is where the student can change how long the robot moves
 //================================
 // The amount as an integer of milliseconds. 
 //1000 milliseconds = 1 second, 
