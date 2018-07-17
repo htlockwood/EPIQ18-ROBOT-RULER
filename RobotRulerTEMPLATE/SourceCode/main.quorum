@@ -14,7 +14,9 @@ integer speed=64
 motor:SetSpeed("B",speed) 
 motor:SetSpeed("C",speed)
 integer volume=32
+//================================
 integer  millisecondsoftravel=4000 //this is where the student can change how long the robot moves
+//================================
 // The amount as an integer of milliseconds. 
 //1000 milliseconds = 1 second, 
 //1500 is a second and a half, or 
@@ -27,14 +29,13 @@ integer  millisecondsoftravel=4000 //this is where the student can change how lo
     screen:OutputCenter(millisecondsoftravel + " MSTravel",6)
 //set button fuctions 
 repeat until button:IsButtonPressed(button:CENTER_BUTTON)   //the loop ends if the CENTER Key is pressed in
-sound:SetVolume(volume/4) //delay after user presses center to let go of robot (3 seconds)
-sound:PlayTone(110, 2000)
+sound:SetVolume(volume/4) 
+sound:PlayTone(110, 333)
 end
-//delay after user presses center to let go of robot (2 seconds)
-sound:SetVolume(volume)
+sound:SetVolume(volume) //delay after user presses center to let go of robot (2 seconds)
 sound:PlayTone(440, 1000)
 sound:PlayTone(220, 1000)
-//move the robot        
+//move the robot forward        
 motor:RotateForward("B")
 motor:RotateForward("C")
 sound:PlayTone(880, millisecondsoftravel)
